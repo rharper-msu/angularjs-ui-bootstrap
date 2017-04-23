@@ -1,18 +1,17 @@
 <div>
-    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
-    <form>
-        <!--<div class="form-group">-->
-            <label for="StartTime">Start Time</label>
-            <p class="input-group">
-                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="starttime" 
-                    is-open="StartTime.opened" placeholder="mm/dd/yyyy"
-                    datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-                />
-                <span class="input-group-btn">
+    <pre>Selected date is: <em>{{startdate | date:'fullDate' }}</em></pre>
+    <form ng-submit="submitForm()">
+
+        <label for="StartTime">Start Time</label>
+        <p class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="startdate" is-open="StartTime.opened"
+                placeholder="mm/dd/yyyy" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+            />
+            <span class="input-group-btn">
             <button type="button" class="btn btn-default" ng-click="openStartTime()"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
-            </p>
-        <!--</div>-->
+        </p>
+
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
