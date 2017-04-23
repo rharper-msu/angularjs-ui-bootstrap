@@ -28,8 +28,10 @@
     "angular-messages": "^1.6.4",
     "angular-route": "^1.6.4",
     "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.2",
     "fs": "0.0.1-security",
+    "jquery": "^3.2.1",
     "path": "^0.12.7"
   }
 }
