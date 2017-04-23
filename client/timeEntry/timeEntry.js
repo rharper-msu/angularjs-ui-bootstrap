@@ -14,7 +14,8 @@
                 formatYear: 'yyyy',
                 maxDate: new Date(),
                 minDate: new Date(2000, 0, 1),
-                startingDay: 0
+                startingDay: 0,
+                showWeeks: false
             };
 
             $scope.openStartTime = function () {
