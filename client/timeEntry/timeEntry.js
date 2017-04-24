@@ -23,9 +23,14 @@
             };
 
             $scope.submitForm = function () {
+
+                if ($scope.timeEntryForm.$invalid) {
+                    return;
+                }
+
                 if ($scope.startdate) {
                     console.log('Start date: ' + $scope.startdate);
-                } else{
+                } else {
                     console.log('Invalid start date: ' + $scope.startdate);
                 }
             };

@@ -1,5 +1,5 @@
 'use strict';
-angular.module('timeKeeper', ['ngRoute', 'ui.bootstrap'])
+angular.module('timeKeeper', ['ngRoute', 'ngMessages', 'ui.bootstrap'])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
