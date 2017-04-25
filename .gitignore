@@ -1,3 +1,5 @@
+# Do not track .gitconfig file for this repo.
+.gitconfig
 
 # Logs
 logs
