@@ -1,6 +1,13 @@
 (function () {
+    'use strict';
     angular.module('timeKeeper')
-        .controller('timeEntry', function ($scope, $http) {
+        .controller('timeEntry', function ($scope) {
+
+            $scope.requiredValidation = function (controlName) {                                
+                var frm = $scope.timeEntryForm;
+                var ctl = frm[controlName];
+                return ctl.$invalid && (frm.$submitted || ctl.$touched);
+            };
 
             $scope.StartTime = {
                 opened: false
@@ -35,6 +42,13 @@
                 } else {
                     console.log('Invalid start date: ' + $scope.startdate);
                 }
+            };
+
+            $scope.resetForm = function () {
+                $scope.timeEntryForm.$setUntouched();
+                $scope.timeEntryForm.$setPristine();
+                $scope.timeEntryForm.startDate.$invalid = true;
+                console.log('reset form');
             };
         });
 })();
