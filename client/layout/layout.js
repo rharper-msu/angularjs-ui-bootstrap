@@ -1,4 +1,8 @@
+/* global angular */
+(function(){
+
 'use strict';
+
 angular.module('timeKeeper', ['ngRoute', 'ngMessages', 'ui.bootstrap'])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
@@ -22,3 +26,7 @@ angular.module('timeKeeper', ['ngRoute', 'ngMessages', 'ui.bootstrap'])
         });
 
     });
+
+
+})();
+
