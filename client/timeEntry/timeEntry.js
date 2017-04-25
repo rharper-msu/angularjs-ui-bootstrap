@@ -24,7 +24,9 @@
 
             $scope.submitForm = function () {
 
+                // Don't process an invalid form.
                 if ($scope.timeEntryForm.$invalid) {
+                    console.log("Operation cancelled. Invalid form.")
                     return;
                 }
 

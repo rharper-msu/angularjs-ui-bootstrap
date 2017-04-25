@@ -4,21 +4,28 @@
 
         <label for="StartTime">Start Time</label>
         <p class="input-group">
-            <input name="startDate" type="text" show-button-bar="false" class="form-control" uib-datepicker-popup="{{format}}" ng-model="startdate" is-open="StartTime.opened"
-                placeholder="mm/dd/yyyy" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-            />
+            <input name="startDate" type="text" show-button-bar="false" class="form-control" uib-datepicker-popup="{{format}}" ng-model="startdate"
+                is-open="StartTime.opened" placeholder="mm/dd/yyyy" datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                alt-input-formats="altInputFormats" />
             <span class="input-group-btn">
             <button type="button" class="btn btn-default" ng-click="openStartTime()"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
         </p>
-        <span class="help-block" 
-            ng-show="(timeEntryForm.$submitted && timeEntryForm.startDate.$invalid) || (timeEntryForm.startDate.$touched && timeEntryForm.startDate.$invalid)">Start date is a required field</span>
-        <button type="submit" class="btn btn-primary" style="margin-top: 20px;margin-bottom: 20px;">Submit</button>
+        <span class="help-block" ng-show="timeEntryForm.startDate.$invalid && (timeEntryForm.$submitted || timeEntryForm.startDate.$touched)">Start date is a required field</span>
+        <button type="submit" class="btn btn-primary btn-sm" style="margin-top: 20px;margin-bottom: 20px;">Submit</button>
     </form>
 </div>
 <div>
-    Form Submitted: {{timeEntryForm.$submitted}}<br />
-    Start Date Invalid: {{timeEntryForm.startDate.$invalid}}<br />
-    
-    
+    Form Submitted: {{timeEntryForm.$submitted}}<br /> Start Date Touched: {{timeEntryForm.startDate.$touched}}<br /> Start
+    Date Invalid: {{timeEntryForm.startDate.$invalid}}<br />
+
+
+</div>
+<hr />
+<div>
+    TODO
+    <ul>
+        <li>Add reset button</li>
+        <li>Add checkbox with validation that it is checked</li>
+    </ul>
 </div>
