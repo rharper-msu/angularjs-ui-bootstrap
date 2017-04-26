@@ -1,7 +1,7 @@
 var path = require('path');
 var express = require('express');
 var app = express();
-var port = 3000;
+var port = 4000;
 
 app.use(express.static('client'));
 
